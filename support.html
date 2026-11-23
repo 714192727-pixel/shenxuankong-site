@@ -17,32 +17,144 @@
   ul { padding-left:22px; }
   a { color:#0066cc; text-decoration:none; word-break:break-all; }
   .foot { margin-top:48px; padding-top:18px; border-top:1px solid var(--line); color:var(--sub); font-size:13px; }
+
+  /* 语言切换：无 JS 时默认简体，与其他语言块一同保持可读 */
+  .langbar { display:flex; gap:6px; justify-content:flex-end; margin-bottom:22px; flex-wrap:wrap; }
+  .langbar button { font:inherit; font-size:13px; line-height:1; padding:6px 11px; cursor:pointer;
+    color:var(--sub); background:#f5f5f7; border:1px solid var(--line); border-radius:999px; }
+  .langbar button[aria-pressed="true"] { color:#fff; background:#1d1d1f; border-color:#1d1d1f; }
+  [data-block][hidden] { display:none !important; }
 </style>
 </head>
 <body>
 <div class="page">
-  <h1>沈氏玄空 · 支持</h1>
-  <div class="meta">最后更新：2026 年 11 月 18 日</div>
 
-  <h2>联系我们</h2>
-  <p>使用问题、账号问题或内容反馈，请发送邮件至：<strong>714192727@qq.com</strong>（简体中文 / English 均可）。我们通常在 2 个工作日内回复。</p>
+  <div class="langbar" role="group" aria-label="语言 / Language">
+    <button type="button" data-set="zh-Hans" aria-pressed="true">简体</button>
+    <button type="button" data-set="zh-Hant" aria-pressed="false">繁體</button>
+    <button type="button" data-set="en" aria-pressed="false">English</button>
+  </div>
 
-  <h2>常见问题</h2>
-  <ul>
-    <li><strong>收不到验证码？</strong>请检查手机号区号是否正确、短信是否被拦截；邮箱登录请查看垃圾邮件文件夹。</li>
-    <li><strong>换设备后档案或权益不见了？</strong>请使用同一账号登录后，在「我的 → 恢复购买」中恢复；档案会随账号同步。</li>
-    <li><strong>如何删除账号？</strong>应用内「我的 → 账号 → 删除账号」，删除即时生效并清除全部云端数据，不可恢复。</li>
-    <li><strong>如何管理或取消订阅？</strong>iOS 系统设置 → Apple ID → 订阅 → 选择对应订阅取消。</li>
-    <li><strong>积分与报告解锁有疑问？</strong>邮件附上账号邮箱与发生时间，我们核对服务端记录后回复。</li>
-  </ul>
+  <!-- ============ 简体 ============ -->
+  <div data-block="zh-Hans">
+    <h1>沈氏玄空 · 支持</h1>
+    <div class="meta">最后更新：2026 年 11 月 18 日</div>
 
-  <h2>内容与免责</h2>
-  <p>本应用内容均整理自传统玄空理论与术数文献，仅供传统文化研习与个人记录参考，不构成医疗、投资、法律或其他专业建议，也不对任何结果作出承诺。</p>
+    <h2>联系我们</h2>
+    <p>使用问题、账号问题或内容反馈，请发送邮件至：<strong>714192727@qq.com</strong>（简体中文 / English 均可）。我们通常在 2 个工作日内回复。</p>
 
-  <h2>隐私政策</h2>
-  <p><a href="https://714192727-pixel.github.io/shenxuankong-site/">https://714192727-pixel.github.io/shenxuankong-site/</a></p>
+    <h2>常见问题</h2>
+    <ul>
+      <li><strong>收不到验证码？</strong>请检查手机号区号是否正确、短信是否被拦截；邮箱登录请查看垃圾邮件文件夹。</li>
+      <li><strong>换设备后档案或权益不见了？</strong>请使用同一账号登录后，在「我的 → 恢复购买」中恢复；档案会随账号同步。</li>
+      <li><strong>如何删除账号？</strong>应用内「我的 → 账号 → 删除账号」，删除即时生效并清除全部云端数据，不可恢复。</li>
+      <li><strong>如何管理或取消订阅？</strong>iOS 系统设置 → Apple ID → 订阅 → 选择对应订阅取消。</li>
+      <li><strong>积分与报告解锁有疑问？</strong>邮件附上账号邮箱与发生时间，我们核对服务端记录后回复。</li>
+    </ul>
 
-  <div class="foot">© 2026 两江新区甲寅年软件开发工作室 · 本页面由 GitHub Pages 托管</div>
+    <h2>内容与免责</h2>
+    <p>本应用内容均整理自传统玄空理论与术数文献，仅供传统文化研习与个人记录参考，不构成医疗、投资、法律或其他专业建议，也不对任何结果作出承诺。</p>
+
+    <h2>隐私政策</h2>
+    <p><a href="https://714192727-pixel.github.io/shenxuankong-site/">https://714192727-pixel.github.io/shenxuankong-site/</a></p>
+
+    <div class="foot">© 2026 两江新区甲寅年软件开发工作室 · 本页面由 GitHub Pages 托管</div>
+  </div>
+
+  <!-- ============ 繁體 ============ -->
+  <div data-block="zh-Hant" hidden>
+    <h1>沈氏玄空 · 支援</h1>
+    <div class="meta">最後更新：2026 年 11 月 18 日</div>
+
+    <h2>聯絡我們</h2>
+    <p>使用問題、帳號問題或內容回饋，請寄送郵件至：<strong>714192727@qq.com</strong>（簡體中文 / English 均可）。我們通常於 2 個工作天內回覆。</p>
+
+    <h2>常見問題</h2>
+    <ul>
+      <li><strong>收不到驗證碼？</strong>請檢查手機號碼區碼是否正確、簡訊是否被封鎖；信箱登入請查看垃圾郵件資料夾。</li>
+      <li><strong>換裝置後檔案或權益不見了？</strong>請使用同一帳號登入後，在「我的 → 回復購買」中回復；檔案會隨帳號同步。</li>
+      <li><strong>如何刪除帳號？</strong>應用程式內「我的 → 帳號 → 刪除帳號」，刪除即時生效並清除全部雲端資料，無法復原。</li>
+      <li><strong>如何管理或取消訂閱？</strong>iOS 系統設定 → Apple ID → 訂閱 → 選擇對應訂閱取消。</li>
+      <li><strong>積分與報告解鎖有疑問？</strong>郵件附上帳號信箱與發生時間，我們核對伺服器記錄後回覆。</li>
+    </ul>
+
+    <h2>內容與免責</h2>
+    <p>本應用程式內容均整理自傳統玄空理論與術數文獻，僅供傳統文化研習與個人記錄參考，不構成醫療、投資、法律或其他專業建議，亦不對任何結果作出承諾。</p>
+
+    <h2>隱私政策</h2>
+    <p><a href="https://714192727-pixel.github.io/shenxuankong-site/">https://714192727-pixel.github.io/shenxuankong-site/</a></p>
+
+    <div class="foot">© 2026 兩江新區甲寅年軟件開發工作室 · 本頁面由 GitHub Pages 託管</div>
+  </div>
+
+  <!-- ============ English ============ -->
+  <div data-block="en" hidden>
+    <h1>Shen Xuankong · Support</h1>
+    <div class="meta">Last updated: November 18, 2026</div>
+
+    <h2>Contact Us</h2>
+    <p>For usage questions, account issues, or content feedback, email <strong>714192727@qq.com</strong> (Simplified Chinese / English). We usually reply within 2 business days.</p>
+
+    <h2>Frequently Asked Questions</h2>
+    <ul>
+      <li><strong>Didn't get a verification code?</strong> Check that the country code is correct and that SMS is not being blocked. For email sign-in, check your spam folder.</li>
+      <li><strong>Lost your profiles or purchases after switching devices?</strong> Sign in with the same account, then use "Me → Restore Purchases". Profiles sync with your account.</li>
+      <li><strong>How do I delete my account?</strong> In the app: "Me → Account → Delete Account". Deletion takes effect immediately and erases all cloud data permanently.</li>
+      <li><strong>How do I manage or cancel a subscription?</strong> iOS Settings → Apple ID → Subscriptions → select the subscription to cancel.</li>
+      <li><strong>Questions about credits or report unlocks?</strong> Email us with your account email and the time it happened; we will check the server records and reply.</li>
+    </ul>
+
+    <h2>Content and Disclaimer</h2>
+    <p>All content in this app is compiled from traditional Xuankong theory and divination literature, for traditional culture study and personal reference only. It does not constitute medical, investment, legal, or other professional advice, and no outcome is promised.</p>
+
+    <h2>Privacy Policy</h2>
+    <p><a href="https://714192727-pixel.github.io/shenxuankong-site/privacy-en.html">https://714192727-pixel.github.io/shenxuankong-site/privacy-en.html</a></p>
+
+    <div class="foot">© 2026 Liangjiang New Area Jiayin Software Development Studio · Hosted on GitHub Pages</div>
+  </div>
+
 </div>
+<script>
+/* 语言选择：默认显示简体（HTML 里已写好），这里只在浏览器语言明确指向繁中或英文时切换。
+   JS 不执行时页面等同原先的简体单语版，不会有空白页风险。 */
+(function () {
+  var TITLES = {
+    'zh-Hans': '沈氏玄空 · 支持',
+    'zh-Hant': '沈氏玄空 · 支援',
+    'en': 'Shen Xuankong · Support'
+  };
+  var LANGS = { 'zh-Hans': 'zh-CN', 'zh-Hant': 'zh-Hant', 'en': 'en' };
+  var blocks = document.querySelectorAll('[data-block]');
+  var btns = document.querySelectorAll('.langbar button');
+
+  function apply(lang) {
+    if (!TITLES[lang]) lang = 'zh-Hans';
+    for (var i = 0; i < blocks.length; i++) {
+      if (blocks[i].getAttribute('data-block') === lang) blocks[i].removeAttribute('hidden');
+      else blocks[i].setAttribute('hidden', '');
+    }
+    for (var j = 0; j < btns.length; j++) {
+      btns[j].setAttribute('aria-pressed', btns[j].getAttribute('data-set') === lang ? 'true' : 'false');
+    }
+    document.documentElement.lang = LANGS[lang];
+    document.title = TITLES[lang];
+  }
+
+  function detect() {
+    var s = (navigator.languages && navigator.languages[0]) || navigator.language || 'zh-Hans';
+    s = String(s);
+    if (/^zh(-|_)?(hant|tw|hk|mo)/i.test(s)) return 'zh-Hant';
+    if (/^en/i.test(s)) return 'en';
+    return 'zh-Hans';
+  }
+
+  for (var k = 0; k < btns.length; k++) {
+    btns[k].addEventListener('click', function () {
+      apply(this.getAttribute('data-set'));
+    });
+  }
+  apply(detect());
+})();
+</script>
 </body>
 </html>
